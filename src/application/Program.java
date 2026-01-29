@@ -17,7 +17,7 @@ public class Program {
 		
 		List<Employee> list = new ArrayList<>();
 		
-		System.out.println("Enter the numer of employees");
+		System.out.print("Enter the numer of employees: ");
 		int n = sc.nextInt();
 		
 		for(int i=1;i<=n;i++) {
@@ -44,6 +44,14 @@ public class Program {
 				list.add(emp);
 			}
 		}
+		
+		System.out.println();
+		System.out.println("PAYMENTS:");
+		for(Employee emp : list) {
+			System.out.println(emp.getName() + " - $ " + String.format("%.2f", emp.payment()));
+		}
+		
+		
 		
 		sc.close();
 	}
